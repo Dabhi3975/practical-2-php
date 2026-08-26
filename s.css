@@ -1,0 +1,485 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f1f5f9;
+    color: #334155;
+    padding: 40px 15px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Home Card Container */
+.home-card {
+    width: 500px;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Page Titles */
+.home-card h1 {
+    font-size: 24px;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.home-card h2 {
+    font-size: 18px;
+    color: #2563eb;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* User Info Box */
+.user-info-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.user-info-box p {
+    font-size: 15px;
+    color: #475569;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.user-info-box p:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.user-info-box b {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.button-group a {
+    display: inline-block;
+    flex: 1;
+    padding: 11px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+/* Profile Button */
+.button-group a[href="profile.php"] {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.button-group a[href="profile.php"]:hover {
+    background-color: #1d4ed8;
+}
+
+/* Logout Button */
+.button-group a[href="logout.php"] {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.button-group a[href="logout.php"]:hover {
+    background-color: #dc2626;
+}
+/* ===================================================
+   1. Form Pages (Login, Register, Send Mail)
+   =================================================== */
+
+.container1 {
+    width: 420px;
+    max-width: 100%;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.container1 h2 {
+    text-align: center;
+    color: #0f172a;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #475569;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #1e293b;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Buttons */
+#submit,
+input[type="submit"] {
+    width: 100%;
+    margin-top: 22px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#submit:hover,
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+#submit:active,
+input[type="submit"]:active {
+    transform: scale(0.99);
+}
+
+/* Auth Navigation Links */
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.login-link p {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.login-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===================================================
+   2. Dashboard / Profile / Mail Inbox Page
+   =================================================== */
+
+.container {
+    width: 850px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05),
+                0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ===================================================
+   Profile Section Headings
+   =================================================== */
+
+.container h2 {
+    color: #0f172a;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.container > h2:first-of-type {
+    margin-top: 0;
+    font-size: 24px;
+    color: #1e293b;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+
+
+/* ===================================================
+   Profile Info Cards
+   =================================================== */
+
+.container > p {
+    font-size: 14px;
+    color: #475569;
+    margin: 6px 8px 6px 0;
+    display: inline-block;
+    background: #f8fafc;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.container > p b {
+    color: #0f172a;
+}
+
+
+/* ===================================================
+   Navigation Links
+   =================================================== */
+
+.container > a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-top: 8px;
+    margin-right: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+
+/* Home Button */
+
+.container > a[href="home.php"] {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+}
+
+.container > a[href="home.php"]:hover {
+    background-color: #e2e8f0;
+}
+
+
+/* Send Mail Button */
+
+.container > a[href="mail.php"] {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.container > a[href="mail.php"]:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Logout Button */
+
+.container > a[href="logout.php"] {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.container > a[href="logout.php"]:hover {
+    background-color: #dc2626;
+}
+
+
+/* ===================================================
+   Divider
+   =================================================== */
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 25px 0;
+}
+
+
+/* ===================================================
+   RECEIVED + SENT MAIL COLUMNS
+   =================================================== */
+
+.mail-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 25px;
+    align-items: start;
+}
+
+
+/* Individual Column */
+
+.mail-column {
+    min-width: 0;
+}
+
+
+/* Column Heading */
+
+.mail-column h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+
+/* ===================================================
+   Mail Item Cards
+   =================================================== */
+
+.mail-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2563eb;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 16px 0;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+
+    /* Important for long messages/files */
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.mail-box:hover {
+    border-color: #cbd5e1;
+    border-left-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+}
+
+
+/* Mail Text */
+
+.mail-box p {
+    margin: 8px 0;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Mail Labels */
+
+.mail-box p b {
+    color: #64748b;
+    display: inline-block;
+    width: 75px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: top;
+}
+
+
+/* ===================================================
+   Mail Message Content
+   =================================================== */
+
+.mail-box p:nth-child(3) {
+    background: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px dashed #cbd5e1;
+    margin: 12px 0;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* ===================================================
+   Attachment Links
+   =================================================== */
+
+.mail-box a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #bfdbfe;
+    display: inline-block;
+    margin-left: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.mail-box a:hover {
+    background-color: #dbeafe;
+    text-decoration: none;
+}
+
+
+/* ===================================================
+   File Information
+   =================================================== */
+
+.file-info {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #64748b;
+}
