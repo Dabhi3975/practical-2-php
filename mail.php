@@ -6,7 +6,7 @@
         exit;
         }
     $sender_id = $_COOKIE['user_id'];
-    $sql = "SELECT id, name, email FROM user WHERE id != '$sender_id' ORDER BY name ASC";
+    $sql = "SELECT email FROM user WHERE id != '$sender_id' ORDER BY name ASC";
     $result = mysqli_query($conn, $sql);
     if (isset($_POST['submit'])) 
         {
