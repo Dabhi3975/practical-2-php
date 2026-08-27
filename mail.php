@@ -12,7 +12,7 @@
         {
         $to      = $_POST['to'];
         $message = $_POST['message'];
-        $sql     = "SELECT * FROM user WHERE email = '$to'";
+        $sql     = "SELECT id  FROM user WHERE email = '$to'";
         $result  = mysqli_query($conn, $sql);
         if (mysqli_num_rows($result) == 0) 
             {
